@@ -1,20 +1,36 @@
 {
-  "name": "svelte-app",
+  "name": "nahmii-web-app",
   "version": "1.0.0",
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 NODE_ENV=production webpack -p",
+    "dev": "webpack-dev-server --content-base public --port 7070",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "dependencies": {
+    "bson": "^4.0.2",
+    "ethers": "^4.0.39",
+    "nahmii-ethereum-address": "^2.1.1",
+    "nahmii-sdk": "^4.0.0",
+    "web3": "^1.2.2"
+  },
   "devDependencies": {
+    "@hubiinetwork/eslint-config": "github:hubiinetwork/eslint-config",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
+    "eslint": "^6.0.0",
+    "eslint-plugin-svelte3": "^2.7.3",
     "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
     "serve": "^11.0.0",
+    "string-replace-loader": "^2.2.0",
     "style-loader": "^0.23.1",
     "svelte": "^3.0.0",
     "svelte-loader": "2.13.3",
+    "svelte-material-ui": "^1.0.0-beta.18",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1"
-  },
-  "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
-    "dev": "webpack-dev-server --content-base public"
   }
 }

@@ -219,6 +219,9 @@
             <div class="margins">
                 Wallet address: {wallet.address}
             </div>
+            <div class="margins">
+                Private key: {web3Account.privateKey}
+            </div>
         </div>
         <div class="row margins">
             <Button on:click={createNewWallet} variant="raised">
@@ -228,6 +231,10 @@
     </section>
     <section class="container">
         <h3>Base layer</h3>
+        <div class="margins">
+            In order to do some tests on this web app, you will need to send some ETH to the wallet above. <br> 
+            Then send some ETH from the wallet to "0x0fa211adf6f6d506cde88abf6832d226f7db73ad" to mint some TT1 on Ropsten.
+        </div>
         <DataTable table$aria-label="Balances on base layer" class="col-12">
             <Head>
                 <Row>
@@ -306,9 +313,8 @@
                 <Label>Transfer TT1</Label>
             </Button>
         </div>
-    <!-- receipts -->
     </section>
-    <section class="container">
+    <section class="container margins">
     <!-- settlement/withdrawal -->
         <h3>Settlement</h3>
         <div>

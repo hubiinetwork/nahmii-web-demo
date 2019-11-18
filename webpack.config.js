@@ -62,6 +62,7 @@ module.exports = {
             const toUse = [
                 'erc20',
                 'ClientFund',
+                'BalanceTracker',
                 'DriipSettlementChallengeByPayment',
                 // 'DriipSettlementChallengeState',
                 'DriipSettlementByPayment',
